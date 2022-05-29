@@ -7,7 +7,11 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- my css -->
 
+    <link rel="stylesheet" href="style.css" />
     <title>My Portfolio | Hilda Abiyyu</title>
   </head>
   <body id="home">
@@ -42,9 +46,9 @@
     <!--navbar akhir  -->
     <!-- my css -->
     <section class="jumbotron text-center">
-      <img src="img/merah-min.jpg" alt="Hilda Abiyyu" width="200" class="rounded-circle img-thumbnail" />
+      <img src="img/merah-min.jpg" alt="Hilda Abiyyu" width="200" class="rounded-circle img-thumbnail" data-aos="zoom-out-down-" data-aos-offseet="500" />
       <h1 class="display-4">HILDA ABIYYU</h1>
-      <p class="lead">Graphic Design | Video Editing | Content Creator</p>
+      <p class="lead" data-aos="fade-left" data-aos-delay="150">Graphic Design | Video Editing | Content Creator</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffff"
@@ -57,7 +61,7 @@
 
     <!-- akhir -->
     <!-- about -->
-    <section id="about">
+    <section id="about" data-aos="fade-down" data-aos-offseet="400">
       <div class="container">
         <div class="row text-center m-3">
           <div class="col">
@@ -66,10 +70,10 @@
         </div>
       </div>
       <div class="row justify-content-center text-center fs-6">
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-right" data-aos-delay="200">
           <p>Hello, I am a beginner freelancer who is proficient in the field of graphic designer, video editing, and content creator</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-left" data-aos-delay="400">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus iusto commodi fugit labore neque obcaecati ullam vero, nisi at facere voluptates odio molestiae enim quaerat numquam dignissimos reprehenderit doloribus eveniet.
           </p>
@@ -81,14 +85,14 @@
     <!-- about akhir -->
     <!-- Layanan  -->
     <section id="Layanan">
-      <div class="container">
+      <div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
         <div class="row text-center m-3">
           <div class="col">
             <h2>Layanan</h2>
           </div>
         </div>
       </div>
-      <div class="row justify-content-center text-center fs-6">
+      <div class="row justify-content-center text-center fs-6" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000">
         <div class="col-md-4">
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam perferendis ad tempore ex, odio impedit numquam sit. Placeat illo architecto odio voluptatibus, atque accusantium sunt in inventore natus facere quo!</p>
         </div>
@@ -112,7 +116,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4 mb-4">
+          <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-offset="200">
             <div class="card">
               <img src="img/jakob-owens-l82NzBSYbj0-unsplash.jpg" alt="project" />
               <div class="card-body"></div>
@@ -122,7 +126,7 @@
               </p>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
+          <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2500" data-aos-offset="250">
             <div class="card">
               <img src="img/surface-w9OdWfCoiw0-unsplash.jpg" alt="project" />
               <div class="card-body"></div>
@@ -132,7 +136,7 @@
               </p>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
+          <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="3000" data-aos-offset="300">
             <div class="card">
               <img src="img/timothy-exodus-P-t_ABQlPxY-unsplash.jpg" alt="project" />
               <div class="card-body"></div>
@@ -178,6 +182,9 @@
       </div>
     </section>
     <!-- akhir -->
+
+    <!-- gambar akhir -->
+
     <!-- contact me -->
     <section id="contact me">
       <div class="container">
@@ -189,21 +196,29 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-6">
-          <form>
+          <div class="alert alert-success alert-dismissible fade show my-alert d-none" role="alert">
+            <strong>ThankYou!</strong> Your messege has been sent.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <form name="wpu-contact-form">
             <div class="mb-3">
               <label for="nama" class="form-label">Nama Lengkap</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="name" />
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="name" name="nama" />
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="email>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="email" name="email" />
             </div>
 
             <div class="mb-3">
               <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
-              <textarea class="form-control" id="Pesan" rows="3"></textarea>
+              <textarea class="form-control" id="Pesan" rows="3" name="pesan"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary btn-kirim">Submit</button>
+            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Loading...
+            </button>
           </form>
         </div>
       </div>
@@ -218,6 +233,38 @@
     </section>
     <!-- akhir -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwbzDoSS6HIRai0kcygaam1GkjUbItZAUihom-lIBOuIZycuKUrtf84l2hp-ycVb3hz/exec";
+      const form = document.forms["wpu-contact-form"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // mulai manipulasi
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        // akhir manipulasi
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // tampilan tombol loading dan kirim
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            // alert
+            myAlert.classList.toggle("d-none");
+            // reset pesan
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
   <footer style="background-color: #00b64c; pb-5; ">
     <p class="text-white text-center p-5">created by @<a href="https://www.instagram.com/hldaabyu_" class="text-white">Hilda Abiyyu</a></p>
